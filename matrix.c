@@ -22,6 +22,17 @@ Returns: The translation matrix created using x, y and z
 as the translation offsets.
 ====================*/
 struct matrix * make_translate(double x, double y, double z) {
+   int r, c;
+  
+  for (r=0; r < m->rows; r++) 
+    for (c=0; c < m->cols; c++) 
+      if(
+      if ( r == c )
+	m->m[r][c] = 1;
+      else
+	m->m[r][c] = 0;
+  
+  m->lastcol = m->cols;
   return NULL;
 }
 
